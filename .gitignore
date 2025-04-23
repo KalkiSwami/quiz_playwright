@@ -1,0 +1,16 @@
+
+# Playwright
+node_modules/
+/allure-results/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/.cursor/
+
+# Environment variables
+.env
+
+# Auth
+
+README.md
