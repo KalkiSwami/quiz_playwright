@@ -3,19 +3,6 @@ import { test, expect } from "./fixtures/base.test";
 
 test.describe('Profile Tests', () => {
 
-    test.beforeEach(async ({ page, loginPage }) => {
-        // Login with LinkedIn
-        await loginPage.navigate('https://app.itsquiz.com/en/login');
-        await loginPage.linkedinBtn.click();
-        await expect(page).toHaveURL(/linkedin\.com\//);
-        await loginPage.emailInput.fill(process.env.GOOGLE_EMAIL || '');
-        await loginPage.passwordInput.fill(process.env.GOOGLE_PASSWORD || '');
-        await loginPage.signInBtn.click();
-    
-        await expect(page).toHaveURL(/app\.itsquiz\.com\//);
-        await page.waitForLoadState('networkidle');
-    });
-
     test('should save profile data correctly', async ({ page, profilePage }) => {
         // Navigate to profile page
         await page.goto('https://app.itsquiz.com/edit-profile');
