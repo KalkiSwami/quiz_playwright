@@ -4,6 +4,7 @@
   "description": "End-to-end tests for ItsQuiz application",
   "scripts": {
     "test": "playwright test",
+    "test:headless": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "report": "playwright show-report",
